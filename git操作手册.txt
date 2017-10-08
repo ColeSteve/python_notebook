@@ -1,0 +1,66 @@
+1.创建一个 Git 仓库
+  git init 
+  #缺省情况下 Git 就会为你创建"master"分支。
+2.拷贝一个 Git 仓库到本地
+  git clone [url]
+3.将该文件添加到缓存
+  git add [文件名]
+4.查看项目的当前状态
+  git status -s
+  ## "A"状态的意思是，这个文件在我们将它添加到缓存
+  ## "M"状态的意思是，进行了更改
+
+5.显示已写入缓存与已修改但尚未写入缓存的改动的区别
+  git diff
+
+6.缓存区内容添加到仓库中。（与git add结合使用）
+  git commit
+
+7.添加备注
+  git commit -m ‘备注信息’
+
+8.将条目从缓存区中移除（如果保留工作区文件，rm后加上-cached）
+  git rm [文件名]
+
+9.移动或重命名一个文件、目录、软连接
+  git mv
+
+10.配置用户名和邮箱
+  git config --global user.name 'colesteve'
+  git config --global user.email 'hp_wgd_keer@outlook.com'
+
+11.创建分支
+  git branch [分支名称]
+
+12.切换分支
+  git checkout [分支名称]
+  #该命令会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录
+
+13.合并分支命令
+  git merge 
+  #可以多次合并到统一分支，也可以选择在合并之后直接删除被并入的分支。
+
+14.列出分支
+  git branch
+
+15.删除分支
+  git branch -d [分支名称]
+
+16.查看提交历史
+  git log
+
+17.添加远程仓库
+  git remote add [shortname] [url]
+
+18.本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，需要配置验证信息
+  ssh-keygen -t rsa -C "邮箱名称"
+
+19.查看当前的远程库
+  git remote -v 
+
+20.从远程仓库下载新分支与数据：
+  git fetch
+  #该命令执行完后需要执行git merge 远程分支到你所在的分支(git merge)
+
+21.删除远程仓库
+  git remote rm
