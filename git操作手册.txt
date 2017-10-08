@@ -64,3 +64,7 @@
 
 21.删除远程仓库
   git remote rm
+
+22.添加到远程仓库
+  git push git@github.com:ColeSteve/python_notebook.git
+  #注意先要进行git pull操作
